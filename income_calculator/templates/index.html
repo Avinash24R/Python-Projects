@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Calculator</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Income Calculator</h1>
+
+        <form method="POST">
+            <label for="source">Income Source:</label>
+            <input type="text" name="source" id="source" required>
+            
+            <label for="amount">Amount (₹):</label>
+            <input type="number" step="10" name="amount" id="amount" required>
+            
+            <button type="submit">Add Income</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Income Sources</h2>
+        <button id="toggleButton">Show/Hide Income Table</button>
+
+        <div id="incomeTable" style="display: none;">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Source</th>
+                        <th>Amount (₹)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for source, amount in income_sources.items() %}
+                    <tr>
+                        <td>{{ source }}</td>
+                        <td>{{ amount }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="Income">
+        <h2>Total Income</h2>
+        <p>Monthly Income: ₹{{ monthly_income }}</p>
+        <p>Annual Income: ₹{{ annual_income }}</p>
+        <p><strong>Income Tax to be Paid: ₹{{ income_tax }}</strong></p>
+    </div>
+
+    <script>
+        const toggleButton = document.getElementById('toggleButton');
+        const incomeTable = document.getElementById('incomeTable');
+
+        toggleButton.addEventListener('click', () => {
+            incomeTable.style.display = incomeTable.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>
