@@ -6,29 +6,26 @@ This repository contains a collection of nine Python projects designed to enhanc
 ## Projects
 1. **Income Calculator**
    - A web application built with Flask to calculate monthly and annual income, as well as income tax based on user-defined sources.
-  
-2. **Expense Splitter**
-   - A program that helps users split expenses among friends or family, making it easier to track shared costs.
 
-3. **Word Frequency**
+2. **Word Frequency**
    - A tool that counts the frequency of each word in a given text input, useful for text analysis and processing.
 
-4. **Tkinter Notebook**
+3. **Tkinter Notebook**
    - A GUI application built using Tkinter that allows users to create and manage notes in a simple and intuitive interface.
 
-5. **Currency Converter**
+4. **Currency Converter**
    - A program that converts amounts from one currency to another based on current exchange rates, pulling data from an external API.
 
-6. **Password Generator**
+5. **Password Generator**
    - A secure password generator that creates strong passwords based on user-defined criteria such as length and character types.
 
-7. **Morse Code Converter**
+6. **Morse Code Converter**
    - A tool to convert plain text to Morse code and vice versa, facilitating learning and understanding of Morse code.
 
-8. **Chatbot**
+7. **Chatbot**
    - A simple chatbot application that interacts with users, answering questions and providing information based on predefined responses.
 
-9. **Text Analyzer**
+8. **Text Analyzer**
    - A program that analyzes a given text for various metrics, such as readability, word count, and sentence structure.
 
 ## Technologies Used
