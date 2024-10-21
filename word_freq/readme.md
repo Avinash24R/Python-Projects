@@ -19,8 +19,8 @@ The **Word Frequency Counter** is a beginner Flask web application that allows u
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/word-frequency-counter.git
-   cd word-frequency-counter
+   git clone https://github.com/Avinash24R/word_frequency_counter.git
+   cd word_frequency_counter
    ```
 
 2. Create a virtual environment (optional but recommended):
