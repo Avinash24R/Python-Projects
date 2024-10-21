@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Frequency Counter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Word Frequency Counter</h1>
+
+        <!-- Flash Messages Section -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li style="color: red;">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Input Form -->
+        <form id="wordFrequencyForm" method="POST" enctype="multipart/form-data">
+            <input type="text" name="text" placeholder="Enter text here..." />
+
+            <input type="file" name="file" />
+
+            <input type="number" name="num_words" placeholder="Top N words" min="1" />
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Word Frequency Display -->
+
+
+        <!-- Chart Canvas -->
+    </div>
+    <div class="word-frequency" id="wordFrequencyDisplay" style="display: block;">
+            <h2>Top Words:</h2>
+            <ul id="wordList">
+                {% for word, count in word_freq.items() %}
+                    <li>{{ word }}: {{ count }}</li>
+                {% endfor %}
+            </ul>
+    </div>
+
+
+</body>
+</html>
