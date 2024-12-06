@@ -34,7 +34,7 @@ A web-based application for generating secure passwords based on user-defined cr
    ```
 3. Clone the repository from GitHub:
    ```bash
-   git clone https://github.com/Avinash24R/Python-Projects/tree/main/password_gen
+   git clone https://github.com/Avinash24R/Python-Projects/password_gen.git
    ```
 
 ### Project Structure
