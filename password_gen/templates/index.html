@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <button id="theme-toggle" class="theme-button">Switch to Light Theme</button>
+        <h1>Secure Password Generator</h1>
+        <form method="POST">
+            <label for="length">Password Length:</label>
+            <input type="number" id="length" name="length" min="1" required>
+
+            <label>
+                <input type="checkbox" name="uppercase"> Include Uppercase Letters
+            </label>
+            <label>
+                <input type="checkbox" name="lowercase"> Include Lowercase Letters
+            </label>
+            <label>
+                <input type="checkbox" name="digits"> Include Numbers
+            </label>
+            <label>
+                <input type="checkbox" name="special"> Include Special Characters
+            </label>
+
+            <button type="submit">Generate Password</button>
+        </form>
+
+        {% if password %}
+        <div class="result">
+            <h2>Your Password:</h2>
+            <p>{{ password }}</p>
+        </div>
+        {% elif error %}
+        <div class="error">
+            <p>Error: {{ error }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        // JavaScript for Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            // Toggle theme classes
+            if (body.classList.contains('dark-theme')) {
+                body.classList.remove('dark-theme');
+                body.classList.add('light-theme');
+                themeToggle.textContent = 'Switch to Dark Theme';
+            } else {
+                body.classList.remove('light-theme');
+                body.classList.add('dark-theme');
+                themeToggle.textContent = 'Switch to Light Theme';
+            }
+        });
+    </script>
+</body>
+</html>
