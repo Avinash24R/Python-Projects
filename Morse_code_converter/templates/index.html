@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Converter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <button id="theme-toggle" class="theme-button">Switch to Light Theme</button>
+        <h1>Morse Code Converter</h1>
+        
+        <form method="POST">
+            <div class="input-section">
+                <label for="text">Enter Text to Convert to Morse Code:</label>
+                <input type="text" id="text" name="text" placeholder="Enter text" />
+            </div>
+            <div class="input-section">
+                <label for="morse">Enter Morse Code to Convert to Text:</label>
+                <input type="text" id="morse" name="morse" placeholder="Enter Morse code" />
+            </div>
+            <button type="submit">Convert</button>
+        </form>
+
+        {% if result %}
+        <div class="result">
+            <h2>Converted Result:</h2>
+            <p>{{ result }}</p>
+        </div>
+        {% elif error %}
+        <div class="error">
+            <p>Error: {{ error }}</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            body.classList.toggle('light-theme');
+            themeToggle.textContent = body.classList.contains('dark-theme')
+                ? 'Switch to Light Theme'
+                : 'Switch to Dark Theme';
+        });
+    </script>
+</body>
+</html>

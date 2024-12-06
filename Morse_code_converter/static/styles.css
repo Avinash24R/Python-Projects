@@ -1,0 +1,170 @@
+/* Base Styles (common to both themes) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    transition: background-color 0.3s ease;
+}
+
+/* Form Spacing */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+form label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+form input[type="number"],
+form input[type="checkbox"],
+form button {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Checkbox Alignment */
+form label input[type="checkbox"] {
+    margin-right: 8px; /* Add space between checkbox and label text */
+}
+
+input[type="number"],
+button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+input[type="number"] {
+    background-color: #2a2a2a;
+    color: #ffffff;
+}
+
+button {
+    background-color: #00c3ff;
+    color: #121212;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #008cba;
+}
+
+/* Improved Vertical Spacing */
+form > * {
+    margin-top: 10px; /* Add vertical space between all form elements */
+}
+
+/* Checkboxes */
+form label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Space between label and next element */
+}
+
+/* Result and Error Messages */
+.result, .error {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.result {
+    background-color: #1a3b1a;
+    color: #b4f0b4;
+}
+
+.error {
+    background-color: #3b1a1a;
+    color: #f0b4b4;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-theme .container {
+    background: #1e1e1e;
+}
+
+body.dark-theme .result {
+    background-color: #1a3b1a;
+    color: #b4f0b4;
+}
+
+body.dark-theme .error {
+    background-color: #3b1a1a;
+    color: #f0b4b4;
+}
+
+/* Light Theme */
+body.light-theme {
+    background-color: #f5f5f5;
+    color: #121212;
+}
+
+body.light-theme .container {
+    background: #ffffff;
+}
+
+body.light-theme .result {
+    background-color: #e7f9e7;
+    color: #3c763d;
+}
+
+body.light-theme .error {
+    background-color: #f9e7e7;
+    color: #a94442;
+}
+
+/* Theme Button */
+.theme-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    max-width: 200px; /* Ensure it doesn't stretch too far */
+    width: auto;
+}
+
+body.dark-theme .theme-button {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+body.light-theme .theme-button {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.theme-button:hover {
+    opacity: 0.8;
+}
