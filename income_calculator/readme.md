@@ -33,7 +33,7 @@ The **Income Calculator** is a web application built with Flask that helps users
    ```
 3. Clone the repository from GitHub:
    ```bash
-   git clone https://github.com/Avinash24R/Python-Projects/tree/main/income_calculator
+   git clone https://github.com/Avinash24R/Python-Projects/income_calculator.git
    ```
 
 ### Project Structure
