@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text */
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background: #1e1e1e; /* Darker nav background */
+    padding: 10px 0;
+    justify-content: center;
+    border-bottom: 1px solid #333;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #e0e0e0; /* Light text for links */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #1a73e8; /* Highlight on hover */
+}
+
+header nav ul li a.active {
+    color: #1a73e8; /* Highlight active page */
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 0;
+    background: #1a73e8; /* Primary color */
+    color: #fff;
+}
+
+.about-section, .contact-section {
+    padding: 20px;
+    text-align: center;
+    background-color: #1e1e1e; /* Dark section background */
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #1e1e1e; /* Dark footer background */
+    color: #e0e0e0;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+}
+
+/* Form Styles */
+.login-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1e1e1e; /* Form container background */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #e0e0e0;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #121212; /* Input background */
+    color: #e0e0e0;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1a73e8; /* Button color */
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1665c1; /* Darker button on hover */
+}
+
+p a {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+p a:hover {
+    color: #1665c1;
+}
