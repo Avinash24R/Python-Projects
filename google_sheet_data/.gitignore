@@ -1,0 +1,11 @@
+# Node modules
+backend/node_modules/
+frontend/node_modules/
+
+# Environment variables
+backend/.env
+
+# jsons
+backend/credentials.json
+backend/package-lock.json
+frontend/package-lock.json
