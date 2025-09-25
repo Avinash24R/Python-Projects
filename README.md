@@ -22,10 +22,7 @@ This repository contains a collection of nine Python projects designed to enhanc
 6. **Morse Code Converter**
    - A tool to convert plain text to Morse code and vice versa, facilitating learning and understanding of Morse code.
 
-7. **Chatbot**
-   - A simple chatbot application that interacts with users, answering questions and providing information based on predefined responses.
-
-8. **Text Analyzer**
+7. **Text Analyzer**
    - A program that analyzes a given text for various metrics, such as readability, word count, and sentence structure.
 
 ## Technologies Used
